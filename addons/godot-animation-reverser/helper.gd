@@ -58,7 +58,7 @@ static func reverse(animation_player: AnimationPlayer, anim_name: String, new_na
 		# Now we'll start to setup the tracks on the new animation
 		for key_idx in range(len(key_items)):
 			var key_item = key_items[key_idx]
-			new_anim.track_set_key_time(track_idx, key_idx, key_item[0])
+			new_anim.track_set_key_time(track_idx, key_idx, anim.get_length() - key_item[0])
 			new_anim.track_set_key_value(track_idx, key_idx, key_item[1])
 			new_anim.track_set_key_transition(track_idx, key_idx, key_item[2])
 
